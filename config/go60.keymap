@@ -561,7 +561,7 @@
   win-compose-key = <F14>;        // Overwrite WinCompose compose key
 };
 
-
+{{{{{{{((((())()(-)(-)(-)(??????@@@@@:::::::::          ))))}}}}}}}
 /* Automatically generated keymap */
 / {
     keymap {
@@ -573,7 +573,7 @@
             &mt LCTRL TAB   &kp X           &kp V           &kp L       &kp C       &kp W                                                                   &kp K       &kp H           &kp G       &kp F       &kp Q  &mt RCTRL DE_SS
             &none           &kp U           &kp I           &kp A       &kp E       &kp O                                                                   &kp S       &kp N           &kp R       &kp T       &kp D  &kp DE_Y
             &kp LSHFT       &kp DE_UDIA     &kp DE_ODIA     &kp DE_ADIA &kp P       &kp DE_Z                                                                &kp B       &kp M           &kp COMMA   &kp DOT     &kp J  &kp RSHFT
-                                            &kp LG(LS(T))   &kp LGUI    &kp LALT    &mo LAYER_NAV  &mo LAYER_WNDWMGMT  &none /*|*/  &none  &mo LAYER_SYM    &kp SPACE   &kp LC(BSPC)    &kp RGUI    &kp K_APP
+                                            &kp LG(LS(T))   &kp LGUI    &kp LALT    &mo LAYER_NAV  &mo LAYER_WNDWMGMT  &kp x /*|*/  &none  &mo LAYER_SYM    &kp SPACE   &kp LC(BSPC)    &kp RGUI    &kp K_APP
         
             >;
         };
