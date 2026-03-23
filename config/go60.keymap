@@ -600,12 +600,12 @@
 
         LAYER_Base {
             bindings = <
-            &none           &none           &none           &none       &none           &magic LAYER_Magic 0                                                    &none       &none           &none       &none       &none       &none
-            &mt LCTRL TAB   &kp X           &kp V           &kp L       &kp C           &kp W                                                                   &kp K       &kp H           &kp G       &kp F       &kp Q       &mt RCTRL DE_SS
-            &none           &hml LGUI U     &hml LALT I     &hml LSFT A &hml LCTRL E    &kp O                                                                   &kp S       &hmr LCTRL N    &hmr LSFT R &hmr LALT T &hmr LGUI D &kp DE_Y
-            &kp LSHFT       &kp DE_UDIA     &kp DE_ODIA     &kp DE_ADIA &kp P           &kp DE_Z                                                                &kp B       &kp M           &kp COMMA   &kp DOT     &kp J       &kp RSHFT
-                                            &kp LG(LS(T))   &kp LGUI    &kp LALT                                                                                            &kp LC(BSPC)    &kp RGUI    &kp K_APP
-                                                                                        &mo LAYER_NAV  &mo LAYER_WNDWMGMT  &kp X /*|*/  &none  &mo LAYER_SYM    &kp SPACE
+            &none           &none           &none           &none       &none           &magic LAYER_Magic 0                                                             &none       &none           &none       &none       &none       &none
+            &kp TAB         &kp X           &kp V           &kp L       &kp C           &kp W                                                                            &kp K       &kp H           &kp G       &kp F       &kp Q       &kp DE_SS
+            &none           &hml LGUI U     &hml LALT I     &hml LSFT A &hml LCTRL E    &kp O                                                                            &kp S       &hmr LCTRL N    &hmr LSFT R &hmr LALT T &hmr LGUI D &kp DE_Y
+            &none           &kp DE_UDIA     &kp DE_ODIA     &kp DE_ADIA &kp P           &kp DE_Z                                                                         &kp B       &kp M           &kp COMMA   &kp DOT     &kp J       &none
+                                            &kp LG(LS(T))   &none       &none                                                                                                        &kp LC(BSPC)    &none       &kp K_APP
+                                                                                        &mo LAYER_NAV  &mo LAYER_WNDWMGMT  &none /*|*/  &mo LAYER_MOUSE  &mo LAYER_SYM   &kp SPACE
             >;
         };
 
