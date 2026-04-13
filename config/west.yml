@@ -10,8 +10,6 @@ manifest:
       url-base: https://github.com/dhruvinsh
 
       
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: ssbb
       url-base: https://github.com/ssbb
       
@@ -42,9 +40,6 @@ manifest:
       remote: urob
       revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
       
-    - name: zmk
-      remote: zmkfirmware
-      import: app/west.yml
     - name: zmk-listeners
       remote: ssbb
       revision: v1
