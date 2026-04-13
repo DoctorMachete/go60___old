@@ -225,7 +225,7 @@
 #define TESTGITHUB  YES
 
 
-#ifdef TESTGITHUB   
+//#ifdef TESTGITHUB   
     hid_listeners {
       compatible = "zmk,hid-listeners";
       caps_feedback {           
@@ -233,7 +233,7 @@
           bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;     // "&rgb_ug RGB_TOG" when CAPSLOCK is enabled and "&rgb_ug RGB_TOG" when CAPSLOCK is disabed
       };
     };
-#endif
+//#endif
 
 &sl {
   release-after-ms = <600>;
