@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: moergo-sc
-      url-base: https://github.com/moergo-sc/zmk/pull/36  # url-base: https://github.com/moergo-sc
+      url-base: https://github.com/moergo-sc
     - name: urob
       url-base: https://github.com/urob
     - name: dhruvinsh
