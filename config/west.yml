@@ -46,5 +46,12 @@ manifest:
       remote: rafaelromao
       revision: v0.3 # set to same as ZMK version above
 
+    - name: zmk-output-behavior-listener
+      remote: badjeff
+      revision: main
+    - name: zmk-drv2605-driver
+      remote: badjeff
+      revision: main
+
   self:
     path: config
