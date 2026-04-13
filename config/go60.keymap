@@ -1338,6 +1338,8 @@
 
 /* Custom Defined Behaviors */
 / {
+// ENABLE  NEXT DEFINE IN ORDER TO ALLOW MODULES BY COMPILING IN GITHUB
+// DISABLE NEXT DEFINE IN ORDER TO ALLOW COMPILING IN THE LAYOUT EDITOR
 #define TESTGITHUB  YES
 
 #define SLHSCMMTS    ht_slashes_iniendcomments 0 0                //  /  \     / *  * /
@@ -1365,9 +1367,21 @@ behaviors {
       #binding-cells = <0>;
       bindings = <&kp A>, <&kp B>, <&kt C>;
     };
-    #define TESTKEY    swapper
+    #define TESTTRISTATE    swapper
+
+    adaptive: adaptive {
+      compatible = "zmk,behavior-adaptive-key";
+      #binding-cells = <0>;
+      bindings = <&kp H>;
+
+      akt_ah { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp U>; };
+      akt_uh { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp A>; };
+      akt_eh { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+    };
+    #define TESTADAPTIVE    adaptive
   #else
-    #define TESTKEY    kp RC(RS(F23))
+    #define TESTTRISTATE    kp RC(RS(F23))
+    #define TESTADAPTIVE    kp RC(RS(F23))
   #endif
 
   sl_long: sticky_key_quick_release {            // to use with NAV/REP ⇒ SKSHIFT/REP
@@ -4935,7 +4949,7 @@ behaviors {
         layer__CMKDH {
             bindings = <
                                     &TD_____F1  &TD_____F2                       &TD_____F3                                &TD_____F4                              &TD_____F5                             &TD_____F6                                                                                                                                                                                                                                                          &HTUI_1tap_kp_tpref LC(LA(LS(F18))) LC(LS(LA(F17)))          &macroUI_1tap_1tap LC(L) LC(E)    &HTUI_1tap_kp_tpref LC(N1) LC(LS(TAB))  &HTUI_1tap_kp_tpref LC(N9) LC(TAB)                    &TD_NEWTAB  &HTUI_1tap_1tap LS(LC(T)) LC(W)
- &HTUI_kp_kp_tpref_350_200_200 RC(RS(F23)) TAB       &kp Q                            &kp W                                     &kp F                                   &kp P                                  &kp B                                                                                                                                                                                                                                                                                                        &kp J                                   &kp L                                     &kp U                               &kp Y   &HTUI_1tap_1tap LC(N) LC(M)                         &TESTKEY
+ &HTUI_kp_kp_tpref_350_200_200 RC(RS(F23)) TAB       &kp Q                            &kp W                                     &kp F                                   &kp P                                  &kp B                                                                                                                                                                                                                                                                                                        &kp J                                   &kp L                                     &kp U                               &kp Y   &HTUI_1tap_1tap LC(N) LC(M)                    &TESTADAPTIVE
                                     &SLHSCMMTS       &kp A  &HTUI_ACTIVATE_ALTTAB_LAYER 0 R                                     &kp S                                   &kp T                                  &kp G                                                                                                                                                                                                                                                                                                        &kp M                           &mm_n_supsubn                                     &kp E                               &kp I                         &kp O                    &mm_quoteabcd
                                     &BKCDELCTR       &kp Z                            &kp X                                     &kp C                                   &kp D  &HTUI_kp_kp_tpref_350_200_200 LCTRL V                                                                                                                                                                                                                                                                        &HTUI_kp_kp_tpref_350_200_200 LCTRL K                                   &kp H              &mm_commacexclam_semioexclam          &mm_dotcquest_dbldotoquest  &mm_minusunder_equalnotequal         &ht_delword_ctrl LCTRL 0
                                                                        &magic LAYER_Magic 0  &HTUI_kp_kp_tpref_250_200_125 LGUI SPACE  &HTUI_kp_kp_tpref_250_200_125 LALT ESC                                                                                                                                                                                                                                                                                                                                                      &HTUI_kp_kp_tpref_250_200_125 RALT DEL  &HTUI_kp_kp_tpref_250_200_125 LGUI K_APP                &magic LAYER_Magic 0
