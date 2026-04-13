@@ -15,6 +15,7 @@
 #include <behaviors.dtsi>
 
 /* Include all behavior includes needed */
+#include <dt-bindings/zmk/hid_usage.h>
 
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
@@ -224,7 +225,7 @@
 /* Custom Device-tree */
 #define TESTGITHUB  YES
 
-#include <dt-bindings/zmk/hid_usage.h>
+
 #ifdef TESTGITHUB   
     hid_listeners {
       compatible = "zmk,hid-listeners";
