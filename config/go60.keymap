@@ -1382,7 +1382,7 @@
   hid_listeners {
     compatible = "zmk,hid-listeners";
     caps_feedback {           
-       layers = <LAYER__ACCENTS>;
+//       layers = <LAYER__ACCENTS>;
        indicator = <HID_USAGE_LED_CAPS_LOCK>;
        bindings = <&macroBothBrace &macroBothBracket>;
      };
