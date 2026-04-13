@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/urob             
     - name: dhruvinsh                                # TRI-STATE
       url-base: https://github.com/dhruvinsh
-#    - name: ssbb                                    # ZMK LISTENERS *** DOESN'T WORK ***
-#      url-base: https://github.com/ssbb 
+    - name: ssbb                                    # ZMK LISTENERS *** DOESN'T WORK ***
+      url-base: https://github.com/ssbb             # ZMK LISTENERS *** DOESN'T WORK ***
     - name: rafaelromao                              # LAYER MORPH
       url-base: https://github.com/rafaelromao             
 
@@ -43,9 +43,10 @@ manifest:
       remote: urob
       revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
       
-#    - name: zmk-listeners            # *** DOESN'T WORK ***
-#      remote: ssbb
-#      revision: v1
+    - name: zmk-listeners            # *** DOESN'T WORK ***
+      remote: ssbb                   # *** DOESN'T WORK ***
+      revision: v1                   # *** DOESN'T WORK ***
+      
     - name: zmk-layer-morph
       remote: rafaelromao
       revision: v0.3 # set to same as ZMK version above
