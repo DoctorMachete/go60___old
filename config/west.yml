@@ -23,11 +23,11 @@ manifest:
 
     - name: zmk-adaptive-key
       remote: urob
-      revision: main # Should match ZMK release.
+      revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
 
     - name: zmk-leader-key
       remote: urob
-      revision: main # Should match ZMK release.
+      revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
 
   self:
     path: config
