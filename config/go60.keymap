@@ -224,6 +224,9 @@
 /* Custom Device-tree */
 #define TESTGITHUB  YES
 
+#ifdef TESTGITHUB   
+#endif
+
 /*  
 // DOESN'T WORK
 / {
@@ -1406,7 +1409,16 @@ behaviors {
     };
     #define TESTLEADER    leader1
 
-
+    layer_morth_zx: layer_morth_zx {             
+      compatible = "zmk,behavior-layer-morph";       #binding-cells = <0>;
+        layers = <LAYER__SKSHIFTNAV LAYER__NUM>;     // works in _SKSHIFTNAV and _NUM layers
+        bindings = <&kp Z>, <&kp X>;                 // changes position of X and Z when in those layers
+    };
+    layer_morth_xz: layer_morth_xz {
+      compatible = "zmk,behavior-layer-morph";       #binding-cells = <0>;
+        layers = <LAYER__SKSHIFTNAV LAYER__NUM>;     // works in _SKSHIFTNAV and _NUM layers
+        bindings = <&kp X>, <&kp Z>;                 // changes position of X and Z when in those layers
+    };
 
    //#define TESTLISTENER   caps_feedback
 
@@ -1912,8 +1924,6 @@ behaviors {
 };
   
 
-#ifdef TESTGITHUB   
-#endif
 
 
 
