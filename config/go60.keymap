@@ -274,6 +274,17 @@
         input-processors = <&zip_x_scaler 0 1>, <&zip_y_scaler 1 16>, <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_xy_to_scroll_mapper>, <&zip_button_behavior_3>;
     };
 };
+
+
+#ifdef TESTGITHUB   
+    hid_listeners {
+      compatible = "zmk,hid-listeners";
+      caps_feedback {           
+          indicator = <HID_USAGE_LED_CAPS_LOCK>;
+          bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;     // "&rgb_ug RGB_TOG" when CAPSLOCK is enabled and "&rgb_ug RGB_TOG" when CAPSLOCK is disabed
+      };
+    };
+#endif
 // ************************************************************************************************************************************************************************************************
 // ************************************************************************************************************************************************************************************************
 // ************************************************************************************************************************************************************************************************
@@ -1387,7 +1398,11 @@ behaviors {
     };
     #define TESTLEADER    leader1
 
-    #define KEY_TEST__    TESTLEADER
+
+
+   //#define TESTLISTENER   caps_feedback
+
+    #define KEY_TEST__    kp RC(RS(F23))
   #else                                              // test values when compiling in the layout editor
     #define KEY_TEST__    kp RC(RS(F23))
   #endif
