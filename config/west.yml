@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: moergo-sc
-      url-base: https://github.com/moergo-sc
+      url-base: https://github.com/darknao/zmk/tree/rgb-layer-24.12  # url-base: https://github.com/moergo-sc
     - name: urob
       url-base: https://github.com/urob
     - name: dhruvinsh
