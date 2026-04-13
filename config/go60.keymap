@@ -15,7 +15,7 @@
 #include <behaviors.dtsi>
 
 /* Include all behavior includes needed */
-#include <dt-bindings/zmk/hid_usage.h>
+//#include <dt-bindings/zmk/hid_usage.h>
 
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
@@ -227,13 +227,15 @@
 
 
 #ifdef TESTGITHUB   
+   #include <dt-bindings/zmk/hid_usage.h>
     hid_listeners {
       compatible = "zmk,hid-listeners";
       caps_feedback {           
           indicator = <HID_USAGE_LED_CAPS_LOCK>;
-          bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;     // "&rgb_ug RGB_TOG" when CAPSLOCK is enabled and "&rgb_ug RGB_TOG" when CAPSLOCK is disabed
+          bindings = <&macroBothBracket &macroBothBracket>;     // "&rgb_ug RGB_TOG" when CAPSLOCK is enabled and "&rgb_ug RGB_TOG" when CAPSLOCK is disabed
       };
     };
+
 #endif
 
 &sl {
