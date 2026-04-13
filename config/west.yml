@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: ssbb
+      url-base: https://github.com/ssbb
 
   projects:
     - name: zmk
@@ -28,6 +30,9 @@ manifest:
     - name: zmk-leader-key
       remote: urob
       revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
-
+      
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
   self:
     path: config
