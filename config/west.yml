@@ -5,21 +5,20 @@ manifest:
     - name: darknao
       url-base: https://github.com/darknao
     - name: urob
-      url-base: https://github.com/urob
-    - name: dhruvinsh
+      url-base: https://github.com/urob             
+    - name: dhruvinsh                                # TRI-STATE
       url-base: https://github.com/dhruvinsh
-
-      
-    - name: ssbb
-      url-base: https://github.com/ssbb
-      
+#    - name: ssbb                                    # ZMK LISTENERS *** DOESN'T WORK ***
+#      url-base: https://github.com/ssbb 
+    - name: rafaelromao                              # LAYER MORPH
+      url-base: https://github.com/rafaelromao             
 
   projects:
-  #  - name: zmk
+  #  - name: zmk                                      # ORIGINAL
   #    remote: moergo-sc
   #    revision: main
   #    import: app/west.yml
-    - name: zmk
+    - name: zmk                                       # PER-LAYER RGB
       remote: darknao
       revision: rgb-layer-24.12
       import: app/west.yml
@@ -40,8 +39,12 @@ manifest:
       remote: urob
       revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
       
-    - name: zmk-listeners
-      remote: ssbb
-      revision: v1
+#    - name: zmk-listeners            # *** DOESN'T WORK ***
+#      remote: ssbb
+#      revision: v1
+    - name: zmk-layer-morph
+      remote: rafaelromao
+      revision: v0.3 # set to same as ZMK version above
+
   self:
     path: config
