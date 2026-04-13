@@ -1384,7 +1384,7 @@
     caps_feedback {           
  //      layers = <LAYER__ACCENTS>;
        indicator = <HID_USAGE_LED_CAPS_LOCK>;
-       bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;
+       bindings = <&kp A &kp B>;
      };
   };
 
