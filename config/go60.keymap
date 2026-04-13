@@ -30,8 +30,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
-#include <dt-bindings/zmk/hid_usage.h>
-
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
 #pragma once
@@ -224,21 +222,20 @@
 };
 
 /* Custom Device-tree */
-#define TESTGITHUB  YES
+//#define TESTGITHUB  YES
 
 
 #ifdef TESTGITHUB   
-//#include <dt-bindings/zmk/hid_usage.h>
 / {
-      hid_listeners {
-        compatible = "zmk,hid-listeners";
-
-        caps_feedback {           
-            indicator = <HID_USAGE_LED_CAPS_LOCK>;
-            bindings = <&macroBothBrace &macroBothBracket >;
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+        nav_reset {
+            layers = <14 15>;
+            bindings = <&macroBothBrace &macroBothBracket>;
         };
     };
 }
+
 #endif
 
 &sl {
