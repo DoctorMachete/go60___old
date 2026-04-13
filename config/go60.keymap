@@ -1362,6 +1362,13 @@
 / {
 // ENABLE  NEXT DEFINE IN ORDER TO ALLOW MODULES BY COMPILING IN GITHUB
 // DISABLE NEXT DEFINE IN ORDER TO ALLOW COMPILING IN THE LAYOUT EDITOR
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+        nav_reset {
+            layers = <14 15>;
+            bindings = <&macroBothBrace &macroBothBracket>;
+        };
+    };
 
 
 #define SLHSCMMTS    ht_slashes_iniendcomments 0 0                //  /  \     / *  * /
