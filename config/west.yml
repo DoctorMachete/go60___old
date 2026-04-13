@@ -13,6 +13,10 @@ manifest:
     - name: rafaelromao                              # LAYER MORPH
       url-base: https://github.com/rafaelromao             
 
+    - name: badjeff                              # BEHAVIOR LISTENER
+      url-base: https://github.com/badjeff
+
+
   projects:
   #  - name: zmk                                      # ORIGINAL
   #    remote: moergo-sc
