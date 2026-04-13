@@ -1375,10 +1375,18 @@
   layer_listeners {
     compatible = "zmk,layer-listeners";
     nav_reset {
-      layers = <14 15>;
-      bindings = <&macroBothBrace &macroBothBracket>;
+      layers = <LAYER__SWITCH_TESTING>;
+      bindings = <&macroBothBrace &macroBothBracket>;     // behavior for when entering IN and for when OUT
     };
   };
+  hid_listeners {
+    compatible = "zmk,hid-listeners";
+    caps_feedback {           
+      indicator = <HID_USAGE_LED_CAPS_LOCK>;
+        bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;
+     };
+  };
+
 #endif
 
 behaviors {
