@@ -222,15 +222,20 @@
 };
 
 /* Custom Device-tree */
+#define TESTGITHUB  YES
+
+/*  
+// DOESN'T WORK
 / {
     layer_listeners {
         compatible = "zmk,layer-listeners";
         nav_reset {
             layers = <14 15>;
-            bindings = <&kp A &kp P>;
+            bindings = <&macroBothBrace &macroBothBracket>;
         };
     };
 }
+*/
 
 &sl {
   release-after-ms = <600>;
@@ -1405,7 +1410,7 @@ behaviors {
 
    //#define TESTLISTENER   caps_feedback
 
-    #define KEY_TEST__    kp RC(RS(F23))
+    #define KEY_TEST__    TESTLEADER
   #else                                              // test values when compiling in the layout editor
     #define KEY_TEST__    kp RC(RS(F23))
   #endif
@@ -1906,7 +1911,7 @@ behaviors {
 
 };
   
-//#define TESTGITHUB  YES
+
 #ifdef TESTGITHUB   
 #endif
 
