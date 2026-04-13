@@ -1,7 +1,9 @@
 manifest:
   remotes:
-    - name: moergo-sc
-      url-base: https://github.com/moergo-sc
+#    - name: moergo-sc
+#      url-base: https://github.com/moergo-sc
+    - name: darknao
+      url-base: https://github.com/darknao
     - name: urob
       url-base: https://github.com/urob
     - name: dhruvinsh
@@ -10,9 +12,13 @@ manifest:
       url-base: https://github.com/ssbb
 
   projects:
+  #  - name: zmk
+  #    remote: moergo-sc
+  #    revision: main
+  #    import: app/west.yml
     - name: zmk
-      remote: moergo-sc
-      revision: main
+      remote: darknao
+      revision: rgb-layer-24.12
       import: app/west.yml
 
     - name: zmk-unicode
