@@ -227,7 +227,7 @@
         compatible = "zmk,layer-listeners";
         nav_reset {
             layers = <14 15>;
-            bindings = <&macroBothBrace &macroBothBracket>;
+            bindings = <&kp A &kp P>;
         };
     };
 }
