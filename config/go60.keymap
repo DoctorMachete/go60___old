@@ -30,7 +30,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
-#include <dt-bindings/zmk/hid_usage.h>
+
 
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
@@ -225,7 +225,6 @@
 
 /* Custom Device-tree */
 #define TESTGITHUB  YES
-//#include <dt-bindings/zmk/hid_usage.h>
 
 
 
@@ -1352,7 +1351,8 @@
 / {
 // ENABLE  NEXT DEFINE IN ORDER TO ALLOW MODULES BY COMPILING IN GITHUB
 // DISABLE NEXT DEFINE IN ORDER TO ALLOW COMPILING IN THE LAYOUT EDITOR
-//#include <dt-bindings/zmk/hid_usage.h>
+//    layers = <LAYER__ACCENTS>;
+
 
 #define SLHSCMMTS    ht_slashes_iniendcomments 0 0                //  /  \     / *  * /
 #define BKCDELCTR    ht_backspace_delete_ctrl LCTRL 0             // ⌫ ⌦ ⎈
@@ -1367,9 +1367,13 @@
 
 //#define ARROW__U HTUI_arrows LS(K) K
 
-// STICKY
 //#define CAPSSHFT    td_OSSHIFT_CAPSLOCK                          // SKSHIFT (tap) + HOLD SHIFT (hold) + CAPS (dbltap) Not used because issues with timings
 
+
+#define HID_USAGE_LED_CAPS_LOCK (0x02)
+#define HID_USAGE_LED_SCROLL_LOCK (0x03)
+#define HID_USAGE_LED_COMPOSE (0x04)
+#define HID_USAGE_LED_KANA (0x05)
 
 
 
@@ -1384,7 +1388,6 @@
   hid_listeners {
     compatible = "zmk,hid-listeners";
     caps_feedback {           
-   //    layers = <LAYER__ACCENTS>;
        indicator = <HID_USAGE_LED_CAPS_LOCK>;
        bindings = <&kp A &kp B>;
      };
