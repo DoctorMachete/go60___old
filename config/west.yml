@@ -21,5 +21,9 @@ manifest:
       remote: dhruvinsh
       revision: main
 
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: main # Should match ZMK release.
+
   self:
     path: config
