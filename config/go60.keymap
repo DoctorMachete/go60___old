@@ -222,6 +222,19 @@
 };
 
 /* Custom Device-tree */
+#define TESTGITHUB  YES
+
+
+#ifdef TESTGITHUB   
+    hid_listeners {
+      compatible = "zmk,hid-listeners";
+      caps_feedback {           
+          indicator = <HID_USAGE_LED_CAPS_LOCK>;
+          bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;     // "&rgb_ug RGB_TOG" when CAPSLOCK is enabled and "&rgb_ug RGB_TOG" when CAPSLOCK is disabed
+      };
+    };
+#endif
+
 &sl {
   release-after-ms = <600>;
 };
@@ -276,15 +289,7 @@
 };
 
 
-#ifdef TESTGITHUB   
-    hid_listeners {
-      compatible = "zmk,hid-listeners";
-      caps_feedback {           
-          indicator = <HID_USAGE_LED_CAPS_LOCK>;
-          bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;     // "&rgb_ug RGB_TOG" when CAPSLOCK is enabled and "&rgb_ug RGB_TOG" when CAPSLOCK is disabed
-      };
-    };
-#endif
+
 // ************************************************************************************************************************************************************************************************
 // ************************************************************************************************************************************************************************************************
 // ************************************************************************************************************************************************************************************************
@@ -1351,7 +1356,7 @@
 / {
 // ENABLE  NEXT DEFINE IN ORDER TO ALLOW MODULES BY COMPILING IN GITHUB
 // DISABLE NEXT DEFINE IN ORDER TO ALLOW COMPILING IN THE LAYOUT EDITOR
-#define TESTGITHUB  YES
+
 
 #define SLHSCMMTS    ht_slashes_iniendcomments 0 0                //  /  \     / *  * /
 #define BKCDELCTR    ht_backspace_delete_ctrl LCTRL 0             // ⌫ ⌦ ⎈
