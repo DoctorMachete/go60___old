@@ -222,21 +222,7 @@
 };
 
 /* Custom Device-tree */
-#define TESTGITHUB  YES
 
-
-#ifdef TESTGITHUB   
-/ {
-    layer_listeners {
-        compatible = "zmk,layer-listeners";
-        nav_reset {
-            layers = <14 15>;
-            bindings = <&macroBothBrace &macroBothBracket>;
-        };
-    };
-}
-
-#endif
 
 &sl {
   release-after-ms = <600>;
@@ -1911,6 +1897,22 @@ behaviors {
 
 };
   
+#define TESTGITHUB  YES
+
+
+//#ifdef TESTGITHUB   
+/ {
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+
+        nav_reset {
+            layers = <14 15>;
+            bindings = <&macroBothBrace &macroBothBracket>;
+        };
+    };
+}
+
+//#endif
 };
 
 /* Automatically generated macro definitions */
