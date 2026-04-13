@@ -39,6 +39,6 @@ manifest:
       
     - name: zmk-listeners
       remote: ssbb
-      revision: v0.3 # v1
+      revision: v1
   self:
     path: config
