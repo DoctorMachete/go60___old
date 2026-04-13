@@ -223,7 +223,7 @@
 
 /* Custom Device-tree */
 #define TESTGITHUB  YES
-
+#include <dt-bindings/zmk/hid_usage.h>
 
 
 
@@ -1382,9 +1382,9 @@
   hid_listeners {
     compatible = "zmk,hid-listeners";
     caps_feedback {           
-       layers = <LAYER__ACCENTS>;
+   //    layers = <LAYER__ACCENTS>;
        indicator = <HID_USAGE_LED_CAPS_LOCK>;
-       bindings = <&macroUI_toggle_RGB &macroUI_toggle_RGB>;
+       bindings = <&kp A &kp B>;
      };
   };
 
