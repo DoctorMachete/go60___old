@@ -284,6 +284,15 @@
 // ************************************************************************************************************************************************************************************************
 
 
+/ {
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+        nav_reset {
+            layers = <14 15>;
+            bindings = <&macroBothBrace &macroBothBracket>;
+        };
+    };
+}
 
 
 
@@ -1897,22 +1906,12 @@ behaviors {
 
 };
   
-#define TESTGITHUB  YES
+//#define TESTGITHUB  YES
+#ifdef TESTGITHUB   
+#endif
 
 
-//#ifdef TESTGITHUB   
-/ {
-    layer_listeners {
-        compatible = "zmk,layer-listeners";
 
-        nav_reset {
-            layers = <14 15>;
-            bindings = <&macroBothBrace &macroBothBracket>;
-        };
-    };
-}
-
-//#endif
 };
 
 /* Automatically generated macro definitions */
