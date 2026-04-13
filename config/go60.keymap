@@ -222,9 +222,9 @@
 };
 
 /* Custom Device-tree */
-//#define TESTGITHUB  YES
+#define TESTGITHUB  YES
 
-
+#include <dt-bindings/zmk/hid_usage.h>
 #ifdef TESTGITHUB   
     hid_listeners {
       compatible = "zmk,hid-listeners";
