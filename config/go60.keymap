@@ -222,7 +222,7 @@
 };
 
 /* Custom Device-tree */
-//#define TESTGITHUB  YES
+#define TESTGITHUB  YES
 
 #ifdef TESTGITHUB   
 #endif
