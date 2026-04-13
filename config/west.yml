@@ -8,13 +8,13 @@ manifest:
       url-base: https://github.com/urob             
     - name: dhruvinsh                                # TRI-STATE
       url-base: https://github.com/dhruvinsh
-    - name: ssbb                                    # ZMK LISTENERS *** DOESN'T WORK ***
-      url-base: https://github.com/ssbb             # ZMK LISTENERS *** DOESN'T WORK ***
+    - name: ssbb                                     # ZMK LISTENERS
+      url-base: https://github.com/ssbb
     - name: rafaelromao                              # LAYER MORPH
       url-base: https://github.com/rafaelromao             
 
-    - name: badjeff                              # BEHAVIOR LISTENER
-      url-base: https://github.com/badjeff
+#    - name: badjeff                                  # BEHAVIOR LISTENER (NOT TESTED)
+#      url-base: https://github.com/badjeff
 
 
   projects:
@@ -43,20 +43,20 @@ manifest:
       remote: urob
       revision: v0.3 # Should match ZMK release, using v0.3 instead of main just in case it breaks later on
       
-    - name: zmk-listeners            # *** DOESN'T WORK ***
-      remote: ssbb                   # *** DOESN'T WORK ***
-      revision: v1                   # *** DOESN'T WORK ***
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
       
     - name: zmk-layer-morph
       remote: rafaelromao
       revision: v0.3 # set to same as ZMK version above
 
-    - name: zmk-output-behavior-listener
-      remote: badjeff
-      revision: main
-    - name: zmk-drv2605-driver
-      remote: badjeff
-      revision: main
+#    - name: zmk-output-behavior-listener     # BEHAVIORAL LISTENER, NOT TESTED
+#      remote: badjeff                        # BEHAVIORAL LISTENER, NOT TESTED
+#      revision: main                         # BEHAVIORAL LISTENER, NOT TESTED
+#    - name: zmk-drv2605-driver               # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
+#      remote: badjeff                        # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
+#      revision: main                         # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
 
   self:
     path: config
