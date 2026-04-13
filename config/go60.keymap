@@ -223,7 +223,7 @@
 
 /* Custom Device-tree */
 #define TESTGITHUB  YES
-#include <dt-bindings/zmk/hid_usage.h>
+
 
 
 
@@ -1350,7 +1350,7 @@
 / {
 // ENABLE  NEXT DEFINE IN ORDER TO ALLOW MODULES BY COMPILING IN GITHUB
 // DISABLE NEXT DEFINE IN ORDER TO ALLOW COMPILING IN THE LAYOUT EDITOR
-
+#include <dt-bindings/zmk/hid_usage.h>
 
 #define SLHSCMMTS    ht_slashes_iniendcomments 0 0                //  /  \     / *  * /
 #define BKCDELCTR    ht_backspace_delete_ctrl LCTRL 0             // ⌫ ⌦ ⎈
@@ -1376,7 +1376,7 @@
     compatible = "zmk,layer-listeners";
     nav_reset {
       layers = <LAYER__SWITCH_TESTING>;
-      bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;     // behavior for when entering IN and for when OUT
+      bindings = <&kp A &kp B>;     // behavior for when entering IN and for when OUT
     };
   };
   hid_listeners {
@@ -1384,7 +1384,7 @@
     caps_feedback {           
        layers = <LAYER__ACCENTS>;
        indicator = <HID_USAGE_LED_CAPS_LOCK>;
-       bindings = <&rgb_ug RGB_TOG &rgb_ug RGB_TOG>;
+       bindings = <&macroUI_toggle_RGB &macroUI_toggle_RGB>;
      };
   };
 
@@ -4336,6 +4336,16 @@ behaviors {
                 , <&kp KP_N7>
                 , <&macro_release>
                 , <&kp LALT>;
+        };
+
+        // A macro so it doesn't need parameters
+        macroUI_toggle_RGB: macroUI_toggle_RGB {
+            label = "&MACROUI_TOGGLE_RGB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings = <&rgb_ug RGB_TOG>;
         };
     };
 };
