@@ -13,13 +13,16 @@ manifest:
     - name: rafaelromao                              # LAYER MORPH
       url-base: https://github.com/rafaelromao             
 
+
 #    - name: badjeff                                  # BEHAVIOR LISTENER (NOT TESTED)
 #      url-base: https://github.com/badjeff
 
 #    - name: maatthc                                  # APP COMPANION TO OUTPUT HID
 #      url-base: https://github.com/maatthc
 
-
+    - name: doctormachete                          # ← ADD THIS
+      url-base: https://github.com/DoctorMachete
+      
   projects:
   #  - name: zmk                                      # ORIGINAL
   #    remote: moergo-sc
@@ -64,7 +67,9 @@ manifest:
 #    - name: zmk-drv2605-driver               # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
 #      remote: badjeff                        # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
 #      revision: main                         # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
-
+    - name: zmk-behavior-force-upper          # ← ADD THIS
+      remote: doctormachete                        # ← 
+      revision: main                          # ←
       
   self:
     path: config
