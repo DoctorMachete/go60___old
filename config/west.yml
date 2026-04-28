@@ -19,9 +19,6 @@ manifest:
 #    - name: maatthc                                  # APP COMPANION TO OUTPUT HID
 #      url-base: https://github.com/maatthc
 
-    - name: DoctorMachete
-      url-base: https://github.com/DoctorMachete
-
 
   projects:
   #  - name: zmk                                      # ORIGINAL
@@ -67,9 +64,7 @@ manifest:
 #    - name: zmk-drv2605-driver               # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
 #      remote: badjeff                        # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
 #      revision: main                         # BEHAVIORAL LISTENER, NOT TESTED AND NOT SURE IF IT'S NEEDED AT ALL
-    - name: zmk-module-force-uppercase
-      remote: DoctorMachete
-      revision: main
+
       
   self:
     path: config
