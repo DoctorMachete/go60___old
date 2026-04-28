@@ -229,6 +229,10 @@
 #ifdef TESTGITHUB
   #include <behaviors/force_upper.dtsi>
 #endif
+#ifndef ZMK_HID_INDICATORS_CAPSLOCK
+#define ZMK_HID_INDICATORS_CAPSLOCK 0x02  // Standard HID Caps Lock bit
+#endif
+
 
 &sl {
   release-after-ms = <600>;                        // medium timeout as the default for sticky layers
