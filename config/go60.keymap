@@ -30,6 +30,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
+#include <behaviors/force_upper.dtsi>
+
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
 #pragma once
