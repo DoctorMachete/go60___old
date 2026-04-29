@@ -22,6 +22,9 @@ manifest:
 
     - name: doctormachete                          # ← ADD THIS
       url-base: https://github.com/DoctorMachete
+
+    - name: prospector
+      url-base: https://github.com/t-ogura
       
   projects:
   #  - name: zmk                                      # ORIGINAL
@@ -70,6 +73,11 @@ manifest:
     - name: zmk-behavior-force-upper          # ← ADD THIS
       remote: doctormachete                        # ← 
       revision: main                          # ←
+
+    - name: prospector-zmk-module
+      remote: prospector
+      revision: v2.0.0  # Use v2.0.0 for ZMK ≤0.3 (Zephyr 3.x)
+      path: modules/prospector-zmk-module
       
   self:
     path: config
