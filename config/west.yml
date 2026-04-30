@@ -26,7 +26,7 @@ manifest:
     - name: prospector
       url-base: https://github.com/t-ogura
 
-    - name: zmk-layer-hid
+    - name: doctormachete          # <-- add this remote
       url-base: https://github.com/DoctorMachete
       
   projects:
@@ -82,10 +82,9 @@ manifest:
       revision: v2.0.0  # Use v2.0.0 for ZMK ≤0.3 (Zephyr 3.x)
       path: modules/prospector-zmk-module
 
-    - name: zmk-layer-hid
-      remote: zmk-layer-hid
+    - name: zmk-layer-hid         # <-- add this project
+      remote: doctormachete
       revision: main
-      path: modules/zmk-layer-hid
       
   self:
     path: config
